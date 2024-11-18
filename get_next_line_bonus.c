@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggasset- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:25:42 by ggasset-          #+#    #+#             */
-/*   Updated: 2024/10/10 13:39:13 by ggasset-         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:18:40 by ggasset-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static void	mem_cp(void *dst, const void *src, ssize_t n)
 {
@@ -121,25 +121,9 @@ char	*get_next_line(int fd)
 /*int main()
 {
 	int fd1 = open("./quij.txt", O_RDONLY);
-	int fd2 = 0;
 	char	*out;
-	while ((out = get_next_line(fd1)))
-	{
-		printf("%s", out);
-		free(out);
-	}
+	out = get_next_line(fd1);
 	close(fd1);
-	fd1 = open("./tests.txt", O_RDONLY);
-	fd2 = fd1;
-	while ((out = get_next_line(fd2)))
-	{
-		printf("%s", out);
-		free(out);
-		if (fd2)
-			fd2 = 0;
-		else
-			fd2 = fd1;
-	}
-	close(fd1);
+	free(out);
 	return (0);
 }*/
